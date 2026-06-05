@@ -1,0 +1,37 @@
+{
+  "bridge": {
+    "name": "Homebridge",
+    "username": "0E:11:22:33:44:55",
+    "port": 51826,
+    "pin": "031-45-154"
+  },
+  "description": "Cầu nối gom thiết bị SmartLife/Tuya vào Apple Home. Sửa các giá trị __DIEN_VAO__ theo hướng dẫn trong SETUP-vi.md, rồi xoá khối _huong_dan.",
+  "_huong_dan": {
+    "accessId": "Lấy ở iot.tuya.com > Cloud > Development > project của bạn > Authorization Key (Access ID/Client ID).",
+    "accessKey": "Cùng chỗ trên (Access Secret/Client Secret).",
+    "countryCode": "Mã quốc gia của tài khoản SmartLife. Việt Nam = 84.",
+    "username/password": "Tài khoản đăng nhập app SmartLife (email hoặc SĐT) — dùng cho chế độ 'custom'.",
+    "endpoint": "URL data center khớp khu vực tài khoản. VN thường thuộc Central Europe: https://openapi.tuyaeu.com . Các DC khác: US https://openapi.tuyaus.com , China https://openapi.tuyacn.com , India https://openapi.tuyain.com ."
+  },
+  "platforms": [
+    {
+      "platform": "TuyaPlatform",
+      "options": {
+        "projectType": "2",
+        "accessId": "__DIEN_VAO_ACCESS_ID__",
+        "accessKey": "__DIEN_VAO_ACCESS_SECRET__",
+        "countryCode": "84",
+        "username": "__DIEN_VAO_TAI_KHOAN_SMARTLIFE__",
+        "password": "__DIEN_VAO_MAT_KHAU_SMARTLIFE__",
+        "appSchema": "smartlife",
+        "endpoint": "https://openapi.tuyaeu.com"
+      }
+    },
+    {
+      "name": "Config",
+      "port": 8581,
+      "platform": "config"
+    }
+  ],
+  "accessories": []
+}

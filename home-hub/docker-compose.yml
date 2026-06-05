@@ -1,0 +1,21 @@
+services:
+  homebridge:
+    image: homebridge/homebridge:latest
+    container_name: homebridge
+    restart: unless-stopped
+    # network_mode: host là BẮT BUỘC để HomeKit (mDNS/Bonjour) hoạt động.
+    # Lưu ý: network_mode: host hỗ trợ tốt trên Linux. Trên Docker Desktop cho Mac,
+    # nếu app Home KHÔNG tìm thấy cầu nối, hãy xem ghi chú ở cuối SETUP-vi.md
+    # (giải pháp: chạy Homebridge trực tiếp bằng installer macOS, hoặc dùng máy Linux/Pi).
+    network_mode: host
+    volumes:
+      - ./homebridge:/homebridge
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+      - HOMEBRIDGE_CONFIG_UI=1
+      - HOMEBRIDGE_CONFIG_UI_PORT=8581
+    logging:
+      driver: json-file
+      options:
+        max-size: "10mb"
+        max-file: "3"

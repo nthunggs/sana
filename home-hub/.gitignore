@@ -1,0 +1,12 @@
+# Homebridge runtime/state — KHÔNG commit (chứa thông tin ghép nối, cache thiết bị)
+homebridge/accessories/
+homebridge/persist/
+homebridge/auth.json
+homebridge/.uix-secrets
+homebridge/backups/
+homebridge/*.log
+
+# Lưu ý: sau khi điền credential thật vào homebridge/config.json,
+# CÂN NHẮC không commit file đó nữa (chứa tài khoản/mật khẩu SmartLife + Access Secret).
+# Nếu muốn giữ template trong git, copy thành config.local.json để dùng thật:
+homebridge/config.local.json

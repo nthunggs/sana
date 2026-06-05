@@ -19,9 +19,11 @@ App Home (Apple)  ──HomeKit──►  HomeKit hub (Apple TV / HomePod)
 | 🟢 SmartLife (Tuya) | plugin `@0x5e/homebridge-tuya-platform` | **Giai đoạn 1** — làm ngay |
 | 🟠 Rạng Đông (RalliSmart) | BLE Mesh + hub HC, không có HomeKit/API công khai | **Giai đoạn 2** — điều tra `rangdong/` |
 
-## Bắt đầu
-1. Đọc và làm theo **[SETUP-vi.md](./SETUP-vi.md)** (Giai đoạn 1 — SmartLife/Tuya).
-2. Sau khi xong Giai đoạn 1, đọc **[rangdong/INVESTIGATION-vi.md](./rangdong/INVESTIGATION-vi.md)** để xử lý Rạng Đông.
+## 👉 BẮT ĐẦU TỪ ĐÂY
+- **Nếu bạn là Claude Code chạy trên máy Mac của người dùng:** đọc và thực hiện
+  **[HANDOFF-mac-vi.md](./HANDOFF-mac-vi.md)** — đó là danh sách việc giao cho bạn (quét mạng, dựng Homebridge).
+- **Người dùng:** đọc **[SETUP-vi.md](./SETUP-vi.md)** (Giai đoạn 1 — SmartLife/Tuya) cho phần bạn cần tự làm
+  (đăng nhập Tuya, quét QR). Phần Rạng Đông xem **[rangdong/INVESTIGATION-vi.md](./rangdong/INVESTIGATION-vi.md)**.
 
 ## Yêu cầu
 - Máy Mac (hoặc thiết bị khác) **luôn bật, không sleep** để chạy Homebridge 24/7.

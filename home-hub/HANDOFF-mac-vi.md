@@ -6,9 +6,19 @@
 
 Branch làm việc: `claude/github-project-review-15zBY`. Trước khi bắt đầu: `git pull`.
 
+## Thứ tự thực hiện (tóm tắt cho Claude Code trên Mac)
+1. **NHIỆM VỤ A — làm NGAY, tự động, không cần hỏi người dùng.** Toàn bộ là lệnh read-only
+   (quét mạng, đọc bảng ARP). An toàn. Chạy xong → commit & push `scan-result.txt`.
+2. **NHIỆM VỤ B — làm tới đâu không cần credential thì làm** (dựng Homebridge, cài plugin).
+   Dừng lại ở bước cần người dùng đăng nhập `iot.tuya.com` → để lại hướng dẫn rõ ràng.
+3. Push mọi kết quả lên branch rồi báo người dùng: "đã push kết quả scan" để session cloud phân tích.
+
+> Lưu ý quyền: phần lõi NHIỆM VỤ A (arp/ping) KHÔNG cần `sudo`. Chỉ bước `nmap -p-` mới cần `sudo`
+> — nếu không có quyền sudo không cần mật khẩu, bỏ qua bước nmap, session cloud vẫn phân tích được từ arp.
+
 ---
 
-## NHIỆM VỤ A — Quét mạng tìm hub Rạng Đông (làm trước)
+## NHIỆM VỤ A — Quét mạng tìm hub Rạng Đông (làm trước, TỰ ĐỘNG)
 1. Chạy script quét (read-only):
    ```bash
    cd home-hub/rangdong
